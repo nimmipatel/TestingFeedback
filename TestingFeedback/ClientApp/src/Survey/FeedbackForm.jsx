@@ -24,10 +24,10 @@ export class FeedbackForm extends React.Component {
     handleMessage = (event) => {
         let iframe = document.getElementById("mainframe");
 
-        if (event != undefined) {
+        if (event !== undefined) {
             var dataFromChildIframe = event.data;
 
-            if (dataFromChildIframe != "SurveyDone")
+            if (dataFromChildIframe !== "SurveyDone")
             {
                 console.log("The message came from some site we don't know. We're not processing it.");
                 return;
